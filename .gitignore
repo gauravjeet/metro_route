@@ -1,1 +1,6 @@
+
+!.gitignore
+
+#exclude these from commits
 README.md
+sql/
