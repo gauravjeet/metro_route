@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/findpath.js"></script>
   </head>
   <body>
