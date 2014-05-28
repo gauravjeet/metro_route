@@ -54,4 +54,7 @@
     <div id="path-canvas"></div>
     <iframe style="margin-left: 15%;" id="map-iframe" height=600px; width=75%;></iframe>
   </body>
+  <footer style="font-size:11px;text-align:center;">
+    Powered by GJ
+  </footer>
 </html>
