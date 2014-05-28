@@ -17,7 +17,7 @@ if (isset($_POST['source']) && isset($_POST['destination'])) {
   else {
     $path = dijkstra_path($source, $dest);
 
-    $result['rendered_path'] = '<div><p>* Stations marked in <i style="color:red;">red</i> are Junctions.</p><br /><p style="color:green;">Your <i>BEST</i> travel route :</p> <strong>' . rtrim($path['rendered_path'], '<td>></td>') . '</strong></div><div><i>Distance : ' . $path['distance'] . ' km</i></div>';
+    $result['rendered_path'] = '<div><i style="background-color:orange;padding:5px;color:white;">Distance : ' . $path['distance'] . ' km</i></div><div><p>* Stations marked in <i style="color:red;">red</i> are Junctions.</p><p style="color:green;">Your <i>BEST</i> travel route :</p> <strong>' . rtrim($path['rendered_path'], '<td>></td>') . '</strong></div>';
     $result['raw_path'] = $path['raw_path'];
   }
   echo json_encode($result);

@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/findpath.js"></script>
   </head>
   <body>
@@ -54,4 +54,7 @@
     <div id="path-canvas"></div>
     <iframe style="margin-left: 15%;" id="map-iframe" height=600px; width=75%;></iframe>
   </body>
+  <footer style="font-size:11px;text-align:center;">
+    Powered by GJ
+  </footer>
 </html>
