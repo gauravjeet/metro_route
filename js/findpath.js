@@ -26,9 +26,10 @@ jQuery(document).ready(function() {
           type: 'post',
           success: function(latlng_response) {
             var latlong = jQuery.parseJSON(latlng_response).latlongs;
-
-            jQuery('#map-iframe').show();
-            jQuery('#map-iframe').attr("src", "plotpath.php");
+            if (jQuery.parseJSON(response).rendered_path.length > 85) {
+              jQuery('#map-iframe').show();
+              jQuery('#map-iframe').attr("src", "plotpath.php");
+        }
           }
         });
       }
