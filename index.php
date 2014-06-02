@@ -18,7 +18,7 @@
     <form style="margin-left: 50px; margin-top: 50px;">
       <table style="margin-left: 30%;">
       <tr>
-        <td>Source : </td>
+        <td>Source </td>
         <td style="margin-left: 25%;">
           <select id="source" style="margin-left: 50px;" />
             <option><?php echo '-------- Select Source --------'; ?></option>
@@ -33,7 +33,7 @@
         </td>
       </tr>
       <tr>
-        <td>Destination : </td>
+        <td>Destination  </td>
         <td style="margin-left: 25%;">
           <select id="destination" style="margin-left: 50px;" />
             <option><?php echo '----- Select Destination -----'; ?></option>
@@ -52,7 +52,8 @@
     </form>
     <div style="background-color:yellow;text-align:center;margin-top:0px;font-weight:bold;margin-left:25%;margin-right:25%;" id="loading">Searching</div>
     <div id="path-canvas"></div>
-    <iframe style="margin-left: 15%;" id="map-iframe" height=600px; width=75%;></iframe>
+    <iframe id="map-iframe" width=75% height=600px style="margin-left:10%;" frameborder="0" style="border:0"></iframe>
+
   </body>
   <footer style="font-size:11px;text-align:center;">
     Powered by GJ

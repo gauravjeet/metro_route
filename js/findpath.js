@@ -1,4 +1,5 @@
 jQuery(document).ready(function() {
+  key = 'AIzaSyBFtVUUrkA4ifx4AJsD0Kk7w54lD-ik_Pc';
   jQuery('#map-iframe').hide();
 
 
@@ -27,9 +28,16 @@ jQuery(document).ready(function() {
           success: function(latlng_response) {
             var latlong = jQuery.parseJSON(latlng_response).latlongs;
             if (jQuery.parseJSON(response).rendered_path.length > 85) {
+
+              // Replace spaces with + character.
+              source = url_sanitize(source);
+              destination = url_sanitize(destination);
+              src = 'https://www.google.com/maps/embed/v1/directions?key=' + key + '&origin=' + source + '&destination=' + destination + '&avoid=tolls|highways&mode=transit&zoom=11';
+
+              // Show Google map.
               jQuery('#map-iframe').show();
-              jQuery('#map-iframe').attr("src", "plotpath.php");
-        }
+              jQuery('#map-iframe').attr('src', src);
+            }
           }
         });
       }
@@ -45,3 +53,11 @@ jQuery(document).ready(function() {
     jQuery('#loading').hide();
   });
 });
+
+// Sanitize for URL aliasing.
+function url_sanitize(input) {
+  input = input.replace(/ /g, '+');
+  input += '+metro+station,Delhi,India';
+  return input;
+//console.log(input);
+}
