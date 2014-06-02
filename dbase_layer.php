@@ -6,7 +6,6 @@ define('DATABASE', 'metro');
 define('TABLE', 'statn_graph');
 define('JUNCTION_TABLE', 'junctions');
 define('LATLONG_TABLE', 'location');
-define('API_KEY', 'AIzaSyAHp1mwSB-jUQ7r_vfgB-QiygaFQnWhV7g');
 
 // Function for select query.
 function select_query($conn = NULL, $table = NULL, $cols = '*', $condition = NULL, $andor = 'AND') {

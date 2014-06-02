@@ -1,7 +1,5 @@
 jQuery(document).ready(function() {
-  key = 'AIzaSyBFtVUUrkA4ifx4AJsD0Kk7w54lD-ik_Pc';
   jQuery('#map-iframe').hide();
-
 
   // Hide Loading bar.
   jQuery('#loading').hide();
@@ -19,6 +17,7 @@ jQuery(document).ready(function() {
 
         // Print the shortest path.
         jQuery('#path-canvas').html(jQuery.parseJSON(response).rendered_path);
+        key = jQuery.parseJSON(response).key;
 
         // Plot this path on graph.
         jQuery.ajax({
@@ -59,5 +58,4 @@ function url_sanitize(input) {
   input = input.replace(/ /g, '+');
   input += '+metro+station,Delhi,India';
   return input;
-//console.log(input);
 }

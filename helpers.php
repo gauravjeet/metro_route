@@ -1,5 +1,6 @@
 <?php
 require_once('dbase_layer.php');
+define('MAPKEY', 'AIzaSyBFtVUUrkA4ifx4AJsD0Kk7w54lD-ik_Pc');
 
 /**
  * Function to set initial distances for each station.
